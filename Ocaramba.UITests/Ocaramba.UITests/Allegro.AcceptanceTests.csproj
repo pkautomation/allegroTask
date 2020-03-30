@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Appveyor.TestLogger" Version="2.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="NPOI" Version="2.4.1" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="OcarambaLite" Version="3.2.8" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.26.0" />
+    <PackageReference Include="Selenium.WebDriver.IEDriver" Version="3.150.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="80.0.3987.10600" />
+	</ItemGroup>
+	<ItemGroup>
+    <Compile Include="DataDriven\DataDrivenHelper.cs" />
+    <Compile Include="DataDriven\TestData.cs" />
+    <Compile Include="PageObjects\InternetPage.cs" />
+    <Compile Include="Tests\HerokuappTestsNUnit.cs" />
+    <Compile Include="ProjectBaseConfiguration.cs" />
+    <Compile Include="ProjectPageBase.cs" />
+    <Compile Include="ProjectTestBase.cs" />
+	</ItemGroup>
+  <ItemGroup>
+    <None Include="appsettings.Linux.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataDriven\DataDriven.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Dockerfile">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+ </Project>
