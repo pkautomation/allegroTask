@@ -19,8 +19,11 @@
 	<ItemGroup>
     <Compile Include="DataDriven\DataDrivenHelper.cs" />
     <Compile Include="DataDriven\TestData.cs" />
-    <Compile Include="PageObjects\InternetPage.cs" />
-    <Compile Include="Tests\HerokuappTestsNUnit.cs" />
+    <Compile Include="PageObjects\BasketPage.cs" />
+    <Compile Include="PageObjects\ItemPage.cs" />
+    <Compile Include="PageObjects\SearchResultPage.cs" />
+    <Compile Include="PageObjects\MainPage.cs" />
+    <Compile Include="Tests\BasketTests.cs" />
     <Compile Include="ProjectBaseConfiguration.cs" />
     <Compile Include="ProjectPageBase.cs" />
     <Compile Include="ProjectTestBase.cs" />
